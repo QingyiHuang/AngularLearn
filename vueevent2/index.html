@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--vue - app是根容器-->
+    <div class="vue-app">
+        <h1>event</h1>
+        <p>我的年〇是{{ age }}</p>
+        <button v-on:click="age++">涨一岁</button><!--test-->
+        <button v-on:click="add">涨一岁</button>
+        <button v-on:click="rm">涨一岁</button> <!--way-->
+        <button v-on:dblclick='rm'>双击减1岁</button>
+        <button v-on:click="rmx(10)">指定数</button>
+    </div>
+    <script src="../src/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
