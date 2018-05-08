@@ -16,11 +16,14 @@
         <button v-on:click="add">涨一岁</button>
         <button v-on:click="rm">涨一岁</button> <!--way-->
         <button v-on:dblclick='rm'>双击减1岁</button>
-        <button v-on:click="rmx(10)">指定数</button>
+        <button v-on:click.once="rmx(10)">减10指定数 once</button>
 
         <div id="canvas" v-on:mousemove="updateXY">
-            {{x}},{{y}}
+            {{x}},{{y}} <span style="width: 50px;height: 50px;font-size: 50px;" v-on:mousemove="stopMove">stop moving</span><br>
+            <span style="width: 50px;height: 50px;font-size: 50px;" v-on:mousemove.stop>stop moving2</span>
         </div>
+        <a href="http://www.baidu.com" v-on:click.prevent="alert">百度不想跳转</a>
+        <a href="http://www.baidu.com" v-on:click.prevent>百度不想跳转prevent 阻止事件</a>
     </div>
     <script src="../src/vue.js"></script>
     <script src="./app.js"></script>
