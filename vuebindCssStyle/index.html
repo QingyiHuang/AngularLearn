@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--计算属性 v-on 等价@   methods中只要被执行一个方法，其他全部都会执行-->
+    <div class="vue-app">
+        <h1>css class 动态</h1>
+
+        <h2>示例1</h2>
+            <div @click="changeColor= !changeColor" v-bind:class="{changeColor:changeColor}">
+                <span>hello san</span>
+            </div>
+        <h2>示例2</h2>
+            <button v-on:click="changeColor=!changeColor">change</button>
+            <div v-bind:class="compClass">
+                <span>no i'm vue</span>
+            </div>
+    </div>
+    <script src="../src/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
