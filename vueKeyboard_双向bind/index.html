@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--vue - app是根容器  v-on 等价@-->
+    <div class="vue-app">
+        <h1>keyboard event</h1>
+        <label>name<input type="text" @keyup.enter="logName"></label><!--enter 触发-->
+        <br>
+        <label>age　<input type="text" @keyup="logAge"></label>
+
+        <h2>双向绑定 input / select / textarea  ref调用标记好的名字</h2>
+        <input ref="name" type="text" @keyup="getN">
+        <span>{{name}}</span>
+        <input ref="age" type="text" @keyup="getA">
+        <span>{{age}}</span>
+
+        <h2>双向绑定</h2>
+        <input ref="name" type="text" v-model="name"><!--当data中有直接绑定-->
+        <span>{{name}}</span>
+        <input ref="age" type="text" v-model="age">
+        <span>{{age}}</span>
+    </div>
+    <script src="../src/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
